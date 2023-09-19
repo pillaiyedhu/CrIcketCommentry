@@ -4,7 +4,6 @@ import 'package:sept15_crickbuzz_developer/provider/TeamProvider.dart';
 import 'package:sept15_crickbuzz_developer/screens/MatchPage.dart';
 
 class BattingPage extends StatelessWidget {
-  //final BattingService battingService = BattingService();
 
   final battingTeamController = TextEditingController();
   final bowlingTeamController = TextEditingController();
@@ -69,18 +68,10 @@ class BattingPage extends StatelessWidget {
                           MaterialPageRoute(
                             builder: (context) => MatchPage(),
                           ));
-
-                      //print(teamProvider.batsman1);
                     },
                     child: const Text('Add Team')),
 
                 SizedBox(height: 20),
-
-                // Text("${teamProvider.battingTeamm}"),
-                // Text("${teamProvider.bowlingTeam}"),
-                // Text("${teamProvider.batsman1}"),
-                // Text("${teamProvider.batsman2}"),
-                // Text("${teamProvider.bowler}"),
               ],
             ),
           ),
@@ -88,8 +79,4 @@ class BattingPage extends StatelessWidget {
       ),
     );
   }
-
-  // Future setTeamName() async {
-  //   await battingService.setTeamName(teamController.text, 0, 0);
-  // }
 }

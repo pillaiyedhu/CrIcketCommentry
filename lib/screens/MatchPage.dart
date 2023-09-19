@@ -7,7 +7,7 @@ class MatchPage extends StatelessWidget {
   final FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
   Widget build(BuildContext context) {
     final teamProvider = Provider.of<TeamProvider>(context);
-    String? battingTeamName = (teamProvider.battingTeamm)!.toUpperCase();
+    //String? battingTeamName = (teamProvider.battingTeamm)!.toUpperCase();
     return Scaffold(
         appBar: AppBar(
           title: Text('CRICKADDU'),

@@ -38,6 +38,8 @@ dependencies:
   firebase_core: ^2.15.1
   cloud_firestore: ^4.9.1
   provider: ^6.0.5
+  date_time_picker: ^2.1.0
+  count_down_time: ^0.0.8
 
 dev_dependencies:
   flutter_test:
