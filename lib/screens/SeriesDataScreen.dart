@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:sept15_crickbuzz_developer/screens/MatchDataPage.dart';
-import 'package:sept15_crickbuzz_developer/screens/TeamDataPage.dart';
+
 
 class SeriesDataScreen extends StatefulWidget {
   const SeriesDataScreen({super.key});
@@ -74,10 +73,3 @@ class _SeriesDataScreenState extends State<SeriesDataScreen> {
     );
   }
 }
-
-// Widget SingleSeries(DocumentSnapshot documentSnapshot) {
-//   Map<String, dynamic> data = documentSnapshot.data() as Map<String, dynamic>;
-//   return ListTile(
-//     title: Text(data['id']),
-//   );
-// }
