@@ -42,7 +42,7 @@ class _MatchDataPageState extends State<MatchDataPage> {
   String selectedMatchType = 'ODI';
 
   //List of Teams and the selected teams........................................
-  List<String> teams = ['India', 'Pakistan', 'Australia', 'Srilanka'];
+  List<String> teams = ['India', 'England', 'Australia', 'Srilanka'];
   String selectedTeam1 = 'India';
   String selectedTeam2 = 'Australia';
 
@@ -307,6 +307,7 @@ class _MatchDataPageState extends State<MatchDataPage> {
                                       onChanged: (value) {
                                         setState(() {
                                           selectedTeam1 = value!;
+                                          getPlayers();
                                         });
                                       },
                                       items: teams.map((type) {
@@ -338,6 +339,7 @@ class _MatchDataPageState extends State<MatchDataPage> {
                                       onChanged: (value) {
                                         setState(() {
                                           selectedTeam2 = value!;
+                                          getPlayers();
                                         });
                                       },
                                       items: teams.map((type) {
@@ -655,7 +657,8 @@ class _MatchDataPageState extends State<MatchDataPage> {
                                                 selectedPlayers1 =
                                                     selectedPlayerIndex1
                                                         .map((player) =>
-                                                            team1PlayersAll[player])
+                                                            team1PlayersAll[
+                                                                player])
                                                         .toList();
 
                                                 print(selectedPlayers1);
@@ -722,7 +725,8 @@ class _MatchDataPageState extends State<MatchDataPage> {
                                                 selectedPlayers2 =
                                                     selectedPlayerIndex2
                                                         .map((player) =>
-                                                            team2PlayersAll[player])
+                                                            team2PlayersAll[
+                                                                player])
                                                         .toList();
 
                                                 print(selectedPlayers2);

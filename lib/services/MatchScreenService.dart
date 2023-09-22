@@ -17,7 +17,7 @@ class MatchScreenService {
     fields.sort();
     String id = fields.join('_');
 
-    await firebaseFirestore.collection('series_check').doc(id).set({
+    await firebaseFirestore.collection('series_new').doc(id).set({
       'id': id,
       'team1_name': team1Name,
       'team2_name': team2Name,
@@ -45,7 +45,7 @@ class MatchScreenService {
     String collectionname = 'match_$currentMatchNumber';
     String documentname = '${collectionname}_$id';
     firebaseFirestore
-        .collection('series_check')
+        .collection('series_new')
         .doc(id)
         .collection('matches')
         .doc(documentname)
@@ -72,7 +72,7 @@ class MatchScreenService {
     String document1Name = '${collection1Name}_$id1';
 
     await firebaseFirestore
-        .collection('series_check')
+        .collection('series_new')
         .doc(id1)
         .collection('matches')
         .doc(document1Name)
@@ -92,7 +92,7 @@ class MatchScreenService {
     String document1Name = '${collection1Name}_$id1';
 
     await firebaseFirestore
-        .collection('series_check')
+        .collection('series_new')
         .doc(id1)
         .collection('matches')
         .doc(document1Name)
