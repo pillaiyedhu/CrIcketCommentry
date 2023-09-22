@@ -40,6 +40,8 @@ dependencies:
   provider: ^6.0.5
   date_time_picker: ^2.1.0
   count_down_time: ^0.0.8
+  flutter_typeahead: ^4.7.0
+  search_choices: ^2.2.7
 
 dev_dependencies:
   flutter_test:

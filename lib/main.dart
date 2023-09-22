@@ -3,8 +3,15 @@ import 'package:provider/provider.dart';
 import 'package:sept15_crickbuzz_developer/provider/MatchProvider.dart';
 import 'package:sept15_crickbuzz_developer/provider/TeamProvider.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:sept15_crickbuzz_developer/screens/BattingPage.dart';
+import 'package:sept15_crickbuzz_developer/screens/CheckPlayersRetrivalScreen.dart';
+import 'package:sept15_crickbuzz_developer/screens/CheckSelectedPlayersList.dart';
+import 'package:sept15_crickbuzz_developer/screens/MatchDataPage.dart';
+import 'package:sept15_crickbuzz_developer/screens/MatchPage.dart';
 import 'package:sept15_crickbuzz_developer/screens/MatchScreen.dart';
+import 'package:sept15_crickbuzz_developer/screens/SeriesDataScreen.dart';
 import 'package:sept15_crickbuzz_developer/screens/StaticScreen.dart';
+import 'package:sept15_crickbuzz_developer/screens/TeamDataPage.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +37,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: StaticScreen()
+      home: SeriesDataScreen()
     );
   }
 }
