@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sept15_crickbuzz_developer/provider/MatchProvider.dart';
 import 'package:sept15_crickbuzz_developer/provider/TeamProvider.dart';
 import 'package:sept15_crickbuzz_developer/screens/BattingPage.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:sept15_crickbuzz_developer/screens/SeriesDataScreen.dart';
 
 
 Future<void> main() async {
@@ -20,7 +22,7 @@ Future<void> main() async {
   );
 
   runApp(
-    ChangeNotifierProvider(create: (context) => TeamProvider(),child: MyApp(),)
+    ChangeNotifierProvider(create: (context) => MatchProvider(),child: MyApp(),)
 
   );
   
@@ -28,6 +30,6 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(home: BattingPage());
+    return MaterialApp(home: SeriesDataScreen());
   }
 }
