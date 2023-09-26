@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
 class cardWidget extends StatelessWidget {
-  Map<String, dynamic>? data;
+  // Map<String, dynamic>? data;
 
-  cardWidget(
-    data, {
+  cardWidget({
     super.key,
   });
 
@@ -23,7 +22,7 @@ class cardWidget extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(data!['matchStatus']),
+            Text('Match Status'),
             SizedBox(
               height: 20,
             ),

@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sept15_crickbuzz_developer/provider/TeamProvider.dart';
-import 'package:sept15_crickbuzz_developer/screens/single_match.dart';
+import 'package:sept15_crickbuzz_developer/screens/detail_match_page.dart';
 
 class Test extends StatefulWidget {
   const Test({super.key});
@@ -14,7 +14,7 @@ class Test extends StatefulWidget {
 class _TestState extends State<Test> {
   @override
   Widget build(BuildContext context) {
-    final teamProvider = Provider.of<TeamProvider>(context);
+    // final teamProvider = Provider.of<TeamProvider>(context);
     return Scaffold(
       backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
@@ -46,7 +46,7 @@ class _TestState extends State<Test> {
 Widget AllMatches() {
   return Expanded(
     child: StreamBuilder(
-      stream: FirebaseFirestore.instance.collection('generalData').snapshots(),
+      stream: FirebaseFirestore.instance.collection('series_new').snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           print('hello');
@@ -62,12 +62,12 @@ Widget AllMatches() {
             itemBuilder: (context, index) {
               return GestureDetector(
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => SingleMatch(),
-                    ),
-                  );
+                  // Navigator.push(
+                  //   context,
+                  //   MaterialPageRoute(
+                  //     builder: (context) => DetailMatchPage(data[index]['team1_name'],data),
+                  //   ),
+                  // );
                 },
                 child: AllMatches1(
                   data[index],
